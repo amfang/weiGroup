@@ -1,0 +1,5 @@
+{
+  "require": {
+    "sergiocarlosmorales/ibm-watson-translator-php-client": "1.0.*"
+  }
+}
