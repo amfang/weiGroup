@@ -111,7 +111,7 @@ function doExecTrans(){
     //$("#ProgressDiv").show();  
     $.ajax({  
        type: "GET",  
-       url: "trans.php",  
+       url: "trans_v0.php",  
        dataType:"text",  
        data: {"txt":txt},  
        success: function(data){  
