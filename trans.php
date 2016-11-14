@@ -96,7 +96,7 @@ else
     //echo '操作完成没有任何错误<br />';  
     //打印获得的数据  
     echo '{"text":"'."apple+1+".$output.'"}';  
-    echo "<script>alert(\""."output:".$output."\")</script>";  
+    //echo "<script>alert(\""."output:".$output."\")</script>";  
     //var_dump($output);  
     //var_dump($ch);  
     //$httpCode = curl_getinfo($ch,CURLINFO_HTTP_CODE);   
