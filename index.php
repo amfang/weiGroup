@@ -61,11 +61,11 @@ $(document).ready(function(){
     //判断是否已经投过票了，如果投过票了，就不再显示投票按钮，而是显示投票结果；  
     if (document.cookie == "" || document.cookie == "abc="){
     		var ck = document.cookie;
-    		alert("cookie == " + ck +" null or abc=");	
+    	//alert("cookie == " + ck +" null or abc=");	
         $("#button1").show();  
         $("div.div_radio").show();  
     }else{ 
-    		alert("cookie == " + ck +" not null or abc= \\\\\ else"); 
+    	//alert("cookie == " + ck +" not null or abc= \\\\\ else"); 
         $("div.div_num").show();  
     }  
 });  
@@ -112,17 +112,17 @@ function doExecTrans(){
     $.ajax({  
        type: "GET",  
        url: "trans.php",  
-       dataType:"text",  
+       dataType:"json",  
        data: {"txt":txt},  
        success: function(data){  
          //$("#ProgressDiv").hide();  
          console.log(data);
-         alert("data: "+data); 
+         //alert("data: "+data); 
          if (data.error){  
             alert(data.error);  
          }else{  
             $("#OutputText").text(data.text); 
-            alert("data: "+data); 
+            //alert("data: "+data); 
          }  
        },  
        error: function(data){  

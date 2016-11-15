@@ -81,7 +81,7 @@ curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, FALSE);
   
 //设置凭证
 //curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);  
-curl_setopt($ch, CURLOPT_USERPWD, '0fb2c53f-d709-4bec-ae6d-2a012b0545af:pp3y7wMAQhxN');
+curl_setopt($ch1, CURLOPT_USERPWD, '0fb2c53f-d709-4bec-ae6d-2a012b0545af:pp3y7wMAQhxN');
   
 //执行请求 
 $output = curl_exec($ch1);  
