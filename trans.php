@@ -71,31 +71,31 @@ curl_close($ch); */
 //tranlator
 $url = "https://gateway.watsonplatform.net/language-translation/api/v2/translate?source=en&target=es&text=".$txt;
 
-$ch1 = curl_init();  
+$ch = curl_init();  
 //curl_setopt($ch, CURLOPT_HEADER, 0); //不返回header部分
-curl_setopt($ch1, CURLOPT_URL, $url);  
-curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);  
+curl_setopt($ch, CURLOPT_URL, $url);  
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);  
 //https请求必须设置以下两项  
-curl_setopt($ch1, CURLOPT_SSL_VERIFYHOST, 0);  
-curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, FALSE);  
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);  
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);  
   
 //设置凭证
 //curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);  
-curl_setopt($ch1, CURLOPT_USERPWD, '0fb2c53f-d709-4bec-ae6d-2a012b0545af:pp3y7wMAQhxN');
+curl_setopt($ch, CURLOPT_USERPWD, '0fb2c53f-d709-4bec-ae6d-2a012b0545af:pp3y7wMAQhxN');
   
 //执行请求 
-$output = curl_exec($ch1);  
+$output = curl_exec($ch);  
   
 if($output === false)  
 {  
-    echo curl_error($ch1);  
+    echo curl_error($ch);  
     //echo "<script>alert(\""."output:".$output."\")</script>";
 }  
 else  
 {  
     //echo '操作完成没有任何错误<br />';  
     //打印获得的数据  
-    echo '{"text":"'."apple+1+".$output.'"}';  
+    echo '{"text":"'."".$output.'"}';  
     //echo "<script>alert(\""."output:".$output."\")</script>";  
     //var_dump($output);  
     //var_dump($ch);  
@@ -104,6 +104,6 @@ else
 }  
   
 // Close handle  
-curl_close($ch1); 
+curl_close($ch); 
 
 ?>

@@ -100,9 +100,9 @@ function execVote(){
 
 //通过AJAX调用后台翻译程序  
 function doExecTrans(){  
-	alert("cliecked！");
+	//alert("cliecked！");
     var txt = $("#InputText").val(); 
-    alert("input！"+txt); 
+    //alert("input！"+txt); 
     if (txt == ""){  
         alert("请输入要翻译的文本！");  
         return;  
